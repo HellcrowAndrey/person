@@ -3,7 +3,6 @@ table = document.getElementById("table");
 var xmlhttp = new XMLHttpRequest();
 
 function readPHPCon() {
-	
 	xmlhttp.onreadystatechange = conn;
 	xmlhttp.open("GET", "read.php", true);
 	xmlhttp.send();
