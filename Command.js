@@ -1,6 +1,10 @@
-var rIndex,
+var doc = document;
 table = document.getElementById("table");
 var xmlhttp = new XMLHttpRequest();
+var btnCreate = doc.getElementById("btnCreate");
+var btnRead = doc.getElementById("btnRead");
+var btnUpdate = doc.getElementById("btnUpdate");
+var btnDelete = doc.getElementById("btnDelete");
 
 function readPHPCon() {
 	xmlhttp.onreadystatechange = conn;
@@ -177,4 +181,20 @@ function deleteTableRow()
 	fname =  document.getElementById("fname").value="",
 	lname =  document.getElementById("lname").value="",
 	age =  document.getElementById("age").value="";
+}
+
+btnCreate.onclick = function () {
+	addTableRow();
+}
+
+btnRead.onclick = function () {
+	readPHPCon();
+}
+
+btnUpdate.onclick = function () {
+	updateTableRow();
+}
+
+btnDelete.onclick = function () {
+	deleteTableRow();
 }
