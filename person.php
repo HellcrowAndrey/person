@@ -7,7 +7,7 @@ $link = mysqli_connect($host, $user, $password, $database)
 or die("Ошибка " . mysqli_error($link));
 mysqli_set_charset($link, 'utf8');
 $query ="SELECT * FROM person";
-$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+$result = mysqli_query($link, $query) or die("Ошибка ".mysqli_error($link)); 
 echo "<table border='1'>
 <tr><th>ID</th>
 <th>fname</th>
@@ -15,10 +15,10 @@ echo "<table border='1'>
 <th>age</th></tr>";
 while($row = mysqli_fetch_array($result)) {
 	echo "<tr>";
-	echo "<td>" . $row['id'] . "</td>";
-	echo "<td>" . $row['fname'] . "</td>";
-	echo "<td>" . $row['lname'] . "</td>";
-	echo "<td>" . $row['age'] . "</td>";
+	echo "<td>".$row['id']."</td>";
+	echo "<td>".$row['fname']."</td>";
+	echo "<td>".$row['lname']."</td>";
+	echo "<td>".$row['age']."</td>";
 	echo "</tr>";
 }
 echo "</table>";
